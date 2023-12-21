@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Template</title>
+</head>
+<body>
+<script>
+
+  const  name = "Muhamad Zaenal Mustopa";
+  const firstName = "Muhamad";
+  const middleName = "Mustopa";
+  const lastName = "Zaenal";
+  const  template = `Name :  ${name} ${firstName} ${middleName} ${lastName}`;
+
+  console.info(template);
+
+  const nilai = 50;
+  const template2 = `Name : ${name} Lulus : ${nilai > 70}`;
+
+  console.info(template2);
+
+  // kita cukup menamhkan enter di text nya
+  const multiline = `Nama Saya Muhamad Zaenal Mustopa,
+    Saya Sekarang Masih Belajar Java Script,
+    dan Basic Java`;
+
+  document.writeln("<pre>");
+  document.writeln(multiline);
+  document.writeln("</pre>");
+</script>
+</body>
+</html>

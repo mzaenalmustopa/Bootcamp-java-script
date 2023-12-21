@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desctructuring</title>
+</head>
+<body>
+<script>
+
+    // desctructuring adalah fitur yang bisa di gubakan untuk membongksr value-value di array atau
+    //object ke dalam varibale- variable
+    // fitur ini sangat mempermudah kita ketika ingin mengambil data dari array atau object tanpa harus melakukan pengmabilan data satu persatu
+
+    {
+        const names = ["Eko", "Zaenal", "Mustopa", "Budi", "Joko"];
+        const [firstName, middleName, lastName, ...others] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(others);
+    }
+
+    {
+        const person = {
+            firstName : "Muhamad",
+            middleName : "Zaenal",
+            lastName : "Mustopa",
+            address : {
+                street : "Jalan Belum Ada",
+                city : "Jakarta",
+                country : "Indonesia"
+            },
+            hobby : "Game",
+            channel : "Programmer Zaman Now"
+        };
+
+        let {firstName, lastName, address:{street, city, country}, ...others} = person;
+        console.info(firstName);
+        console.info(lastName);
+        console.info(street);
+        console.info(city);
+        console.info(country);
+        console.info(others);
+    }
+
+    // destructuring function parameter
+
+    // desctructuring tidak hanya bisa di lakukan di variable, tapi juga bisa di lakukan di function paramater
+    // hal ini membuat kita mudah ketika ingin mengambil nested data dalam array atau object dalam function
+
+    {
+        function displayPerson(firstName, middleName, lastName){
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        const person = {
+            firstName: "Muhamad",
+            middleName: "Zaenal",
+            lastName: "Mustopa",
+        };
+
+        displayPerson(person);
+    }
+
+    {
+        function sum (first, second){
+            return first + second ;
+        }
+
+        console.info(sum(1,1));
+        console.info(sum(10,10));
+    }
+
+    // default value (destructuring pada array)
+    // yang paling menarik di destructuring adalah, kita bisa menambhakan defaukt value
+    // jadi misal kita melakukan desctructuring terhadap arrau , ternyata tidak ada datanya
+    // maka kita bisa menambhakan default value
+    // begitu juga pada object, jika ternyata pada property nya tidak ada object
+    // maka kita bisa menambahkan default value
+
+    {
+        const names = ["Eko"];
+        const [firstName, middleName = "Kurniawan", lastName = "khannedy"] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+    }
+
+    // destructuring pada object default value
+
+    {
+        const person = {
+            firstName : "Muhamad",
+            lastName : "Mustopa",
+        };
+
+        let {firstName, middleName = "Zaenal", lastName} = person;
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+    }
+
+
+    // menggunakan nama variable lain
+    // saat melakukan destructuring di array , kita bisa dengan mudah membuat nama variable sesuka kita
+    // namun pada sat melakukan destructuring , kita harus membuat nama varibale sama dengan nama property
+    // kita juga bisa menggunakan nama variable lain saat melakukan destructuring object jika kita mau
+
+    {
+        const person = {
+            firstName : "Muhamad",
+            middleName : "Zaenal",
+            lastName : "Mustopa",
+        };
+
+        let {
+            firstName : namaDepan,
+            middleName : namaTengah = "Kurniawan",
+            lastName :namaBelakang } = person;
+        console.info(namaDepan);
+        console.info(namaTengah);
+        console.info(namaBelakang);
+    }
+
+</script>
+</body>
+</html>

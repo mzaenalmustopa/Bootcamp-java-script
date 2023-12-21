@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PopUp Confirm</title>
+</head>
+<body>
+<script>
+
+    // input confirm di gunakan untuk meminta input boolean dari oengguna browser dalam bentuk
+    // pop-up unput pilihan
+
+  const  masuk = confirm("Anda Yakin Mau Masuk");
+
+  if (masuk){
+    const name = prompt("Siapa Nama Anda");
+    alert(`Hello${name}`);
+  } else {
+    alert("Bye Bye");
+  }
+
+</script>
+</body>
+</html>

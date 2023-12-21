@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Function</title>
+</head>
+<body>
+<script>
+
+  // Arrow Function
+
+  //Arrow Function adalah alternatif pembuatan function yang lebih sederhana dari function biasanya
+  // namun terdapat limitasi dan juga tidak bisa di gunakan di semua situasi
+  // di namakan arrow function karena menggunakan tanda => (seperti panah)
+  // berikut contoh beberapa kekurangan arrow function
+  //    - tidak memiliki fitur argument object
+  //    - tidak bisa menggunakan function generator
+  //    - tidak bisa mengakses this (yang nanti akan di bahas di function di object
+  //    - tidak bisa mengakses this (yang nanti akan di bahas di javascript Object Oriented programming
+
+  const sayHello = (name) => {
+    const say = `hello ${name}`;
+    console.info(say);
+  }
+
+  sayHello("Eko");
+
+  // arrow function tanpa block
+  // -jika sebuah arrow function isinya sederhana, misalnya haya satu baris
+  // - kita bisa membuat arrow function tanpa harus menggunakan block
+
+  const sayHello = (name) => console.info(`Hello ${name} `);
+
+  sayHello("Eko");
+
+  // Arror function return value
+  // - arrow function return value bisa mengembalikan value , sama seperti function biasanya
+  // - jika menggunakan block , maka kita perlu menggunakan kata kunci return
+  // - jika tidak menggunakan block, kita tidak perlu menggunakan kata kunci return
+
+  // const  sum = (first, second) => {
+  //   return first + second;
+  // }
+
+  const sum = (first, second) => first + second;
+
+  console.info(sum(100, 100));
+
+  // jika parameter arrow function hanya satu, kita bisa tidak menggunakan kurung pada parameter
+  // jika hanya satu parameter boleh tanpa tanda kurung
+  const sayHello = name=> console.info(`Hello ${name} `);
+
+  // arrow function sebagai anonymous function
+  // jadi kita juga bisa menggunakan arrow function sebagai parameter di function lain
+
+  //Anonymous function
+  // giveMeName(function (name){
+  //   console.info(`Hello ${name}`);
+  // })
+
+  //Arrows Function
+  giveMeName(name => console.info(`Hello ${name}`));
+
+</script>
+</body>
+</html>

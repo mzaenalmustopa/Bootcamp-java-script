@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Return Say</title>
+</head>
+<body>
+<script>
+
+    // membuat function dengan parameter dan return value
+    function sayHello(firstName, lastName){
+        const say = 'Hello' ${firstName} ${lastName};
+        return say;
+    }
+
+     const result = sayHello("Eko", "Kurniawan");
+    document.writeln(result);
+
+    function getFinalValue (value){
+        if (value > 90){
+            return"A";
+        }else if (value > 80){
+            return "B";
+        } else if (value > 70){
+            return "C";
+        } else if (value > 60){
+            return "D";
+        }else {
+            return "E";
+        }
+    }
+
+    const finalValue  = getFinalValue(95);
+    document.writeln(finalValue);
+
+    function isContains(array, searchValue){
+        for (const element of array){
+            if (element === searchValue){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    const array = [1,234,435,4545,45,3,53,34];
+    const search = 10;
+    const found = isContains(array, search);
+    document.writeln(found);
+
+</script>
+</body>
+</html>

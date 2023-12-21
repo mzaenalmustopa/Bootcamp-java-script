@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kata Kunci this</title>
+</head>
+<body>
+<script>
+
+    // kata kunci this
+
+    // kata kunci this adalah referensi ke object milik siapa
+    // tiap lokasi akata kucni this , bisa berbeda beda referensi pemiliknya
+    // dalam object method , this merupakan referensi ke object pemilik function nya
+    // di global score , this merupakan referensi ke global object
+    // di function dengan strcit mode , this adalah undifined
+    // dalam event , this merupakan referensi ke element yang menerima event
+
+    console.info(this);
+
+    function sample(){
+        console.info(this);
+
+        function inner(){
+            console.info(this);
+        }
+
+        inner();
+    }
+
+    sample();
+
+    const person = {
+        name : "Eko",
+        sayHello : function (value){
+            console.info(`Hello ${value} My Name Is ${this.name}`);
+        }
+    };
+
+    person.sayHello("Budi");
+    person.sayHello("Joko");
+
+</script>
+</body>
+</html>

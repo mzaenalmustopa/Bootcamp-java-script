@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Undefined</title>
+</head>
+<body>
+<script>
+
+    // undefined adalah sebuah tipe data
+    // sebuah variable yang belum di tambahkan nilai maka artinya variable tersebut merupakan tipe data undefined
+    let name;
+
+    // tipe data undefined untuk mengecek apakah ada data atau tidak
+    // variablenya belum di tambahkan data apapun
+    if (name === undefined){
+        console.info("Undefined");
+    } else {
+        console.info("Defined");
+    }
+
+    const names = ["Muhamad", "Zaenal"];
+    if (names[2] === undefined){
+        console.info("ARRAY UNDEFINED");
+    } else {
+        console.info("ARRAY DEFINED");
+    }
+
+    const person = {};
+    if (person.name === undefined){
+        console.info("OBJECT UNDEFINED");
+    } else {
+        console.info("OBJECT DEFINED");
+    }
+
+</script>
+</body>
+</html>

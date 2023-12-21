@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class : getter-setter</title>
+</head>
+<body>
+<script>
+
+    // class
+    class Person{
+        constructor(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastname = lastName;
+        }
+
+        get fullName(){
+            return `${this.firstName} ${this.lastname}`;
+        }
+
+        set fullName(value){
+            const result = value.split("");
+            this.firstName = result[0];
+            this.lastname = result[1];
+        }
+    }
+
+    const topa = new Person("Zaenal", "Mustopa");
+    console.info(topa);
+
+</script>
+</body>
+</html>

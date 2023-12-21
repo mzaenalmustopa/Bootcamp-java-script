@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+<script>
+
+    // array
+    // array dalah tipe data yang berisikan kumpulan data
+    // array di javascript memiliki sifat dinamis , artinya datanya bisa bertambah dengan sendirinya saat
+    // kita memasukkan data ke dalam array
+
+  let arrayKosong = [];
+  let arrayNama = ["Muhamad", "Zaenal", "Mustopa"];
+
+  const  names = [];
+  names.push("Muhamad");
+  names.push("Zaenal","Mustopa");
+
+  console.table(names);
+
+  names[0] = "Programmer";
+  names[1] = "JavaScript";
+  names[2] = "Java";
+
+  console.table(names);
+
+  delete names[3];
+
+  console.table(names);
+
+  names.push("Eko Lagi");
+  names.push(1,2,3,4,5); // JavaScript bebas masu memasukan data string atau pun number tidak ada batasannya
+  names.push(["Muhamad","Zaenal","Mustopa"]);
+
+  console.table(names);
+</script>
+</body>
+</html>

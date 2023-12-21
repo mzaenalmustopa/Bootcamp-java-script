@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Anonymus</title>
+</head>
+<body>
+<script>
+
+  const  say = function (name){
+    document.writeln(`Hello ${name} `);
+  }
+
+  say("EKo");
+  say("Budi");
+
+  // anonymus function di paramater
+  function giveMeName(callback){
+    callback("EKO");
+  }
+
+  giveMeName(say);
+
+  giveMeName(function (name){
+    document.writeln(`Hi ${name}`);
+  });
+
+</script>
+</body>
+</html>

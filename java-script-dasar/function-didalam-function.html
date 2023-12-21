@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function In Function</title>
+</head>
+<body>
+<script>
+
+    // function hanya boleh di deklarasikan atau di akses di dalam fucntion
+    // ketika mengakses dari luar akan terjadi error
+    function outer(){
+
+        function inner(){
+            console.info("Inner");
+        }
+
+        inner();
+        inner();
+    }
+    outer();
+
+</script>
+</body>
+</html>

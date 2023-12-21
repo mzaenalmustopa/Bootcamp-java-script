@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Function Di Object Method Arrow</title>
+</head>
+<body>
+<script>
+
+    // Arrow Function di object
+
+    // arrow function juga bisa kita gunakan sebagai object methid
+    // namun oerlu di ketahui , arrow function tidak bisa di gubnakan untuk mengakses arguments object
+    // fucntion generator, kata kunci this dan kata junci suoer
+    // jadi pastikan gunakan arrrow function hanya memang ketika kita tidak butuh fitur fitur di atas
+
+    const person = {
+        name: "Eko",
+        sayHello : function (name){
+            console.info(`Hello ${name}, My name is ${this.name}`);
+        }
+    };
+
+    person.sayHello("Budi");
+
+</script>
+</body>
+</html>
