@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator instanceof</title>
+</head>
+<body>
+<script>
+
+    class Employe {
+
+    }
+
+     class Manager extends Employe{
+
+     }
+    const budi = new Employe();
+    const eko = new Manager();
+
+    console.info(typeof budi);
+    console.info(typeof eko);
+
+    // true
+    console.info(budi instanceof Employe); // untu mengecek apakah hasil dari instaceof dari employee dan nilai nya berbentuk boolean
+    // false
+    console.info(eko instanceof Employe); // untu mengecek apakah hasil dari instaceof dari employee dan nilai nya berbentuk boolean
+
+    // true
+    console.info(budi instanceof Employe); // untu mengecek apakah hasil dari instaceof dari employee dan nilai nya berbentuk boolean
+    // true
+    console.info(eko instanceof Manager); // untu mengecek apakah hasil dari instaceof dari employee dan nilai nya berbentuk boolean
+
+</script>
+</body>
+</html>

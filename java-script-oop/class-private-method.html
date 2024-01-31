@@ -10,17 +10,26 @@
     class Person{
 
         say(name){
-
+            if(name){
+                this.#sayWithName(name);
+            }else {
+                this.#sayWithoutName();
+            }
         }
 
+        // private method
         #sayWithoutName(){
-
+            console.info("Hello");
         }
 
         #sayWithName(){
-
+            console.info(`Hello ${name}`);
         }
     }
+
+    const topa = new Person();
+    topa.say("Joko");
+    topa.#sayWithoutName(); // tidak bisa di akses karena private
 
 </script>
 </body>
