@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Static-class field</title>
+</head>
+<body>
+<script>
+
+    class Configuration {
+       static name = "Belajar JavaScript OOP";
+       static version = 1.0;
+       static author = "Muhamad zaenal mustopa";
+    }
+
+    const topa = new Configuration();
+    console.info(topa);
+
+    Configuration.author = "Muhamad zaenal mustopa";
+
+    // static field ini bisa di akses secara global
+    console.info(Configuration.name);
+    console.info(Configuration.version);
+    console.info(Configuration.author);
+
+</script>
+</body>
+</html>

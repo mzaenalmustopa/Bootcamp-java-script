@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+</head>
+<body>
+<script>
+
+    class ValidationError extends Error{
+        constructor(message , field) {
+            super(message);
+            this.field = field;
+        }
+    }
+
+  class MathUtil {
+
+    static sum(...numbers){
+
+        if (numbers.length === 0){
+            throw  new ValidationError("Totol paramater harus lebih dari 0", "numbers");
+        }
+
+        let total = 0;
+        for (const number of numbers) {
+            total += number;
+        }
+
+        return total;
+    }
+  }
+
+  // jika ada error di blok try catch maka akan berhenti di error handling nya.
+  // dan jika tidak ada error , maka program akan di lanjutkan tidak berhenti di error message
+
+  try {
+      console.info(MathUtil.sum());
+      console.info("topa");
+  } catch (error){
+        if (error instanceof ValidationError){
+            console.info(`Terjadi Error di field ${error.field}  dengan error ${error.message}`);
+        }else {
+            console.info(`Terjadi error : ${error.message} `);
+        }
+
+  } finally {
+      console.info("Program Selesai")
+  }
+
+  console.info("topa");
+  // blok finally itu akan tetap di eksekusi walaupun ada blok error di try catch
+
+
+  class Counter {
+      #counter = 0;
+
+      next(){
+          try {
+              return this.#counter;
+          } finally {
+              this.#counter++;
+          }
+      }
+  }
+
+  const counter = new Counter();
+  console.info(counter.next());
+  console.info(counter.next());
+  console.info(counter.next());
+  console.info(counter.next());
+  console.info(counter.next());
+
+</script>
+</body>
+</html>
